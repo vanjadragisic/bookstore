@@ -37,6 +37,7 @@
     <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Code" Type="nvarchar(max)" Nullable="true" />
     <Property Name="NumberOfPages" Type="int" Nullable="true" />
+    <Property Name="SomeProperty" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Title" Type="nvarchar(max)" Nullable="true" />
     <Property Name="AuthorID" Type="uniqueidentifier" customannotation:Index="{ Name: IX_AuthorID, Order: 0 }" Nullable="true" />
   </EntityType>

@@ -27,6 +27,8 @@ namespace Bookstore
         public string Code { get; set; }
         /*PropertyInfo Attribute Bookstore.Book.NumberOfPages*/
         public int? NumberOfPages { get; set; }
+        /*PropertyInfo Attribute Bookstore.Book.SomeProperty*/
+        public string SomeProperty { get; set; }
         /*PropertyInfo Attribute Bookstore.Book.Title*/
         public string Title { get; set; }
         /*PropertyInfo Attribute Bookstore.Book.AuthorID*/
@@ -212,6 +214,7 @@ namespace Common.Queryable
                 ID = item.ID,
                 Code = item.Code,
                 NumberOfPages = item.NumberOfPages,
+                SomeProperty = item.SomeProperty,
                 Title = item.Title,
                 AuthorID = item.AuthorID/*DataStructureInfo AssignSimpleProperty Bookstore.Book*/
             };

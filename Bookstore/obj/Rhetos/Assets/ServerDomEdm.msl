@@ -7,6 +7,7 @@
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Code" ColumnName="Code" />
         <ScalarProperty Name="NumberOfPages" ColumnName="NumberOfPages" />
+        <ScalarProperty Name="SomeProperty" ColumnName="SomeProperty" />
         <ScalarProperty Name="Title" ColumnName="Title" />
         <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
       </MappingFragment>

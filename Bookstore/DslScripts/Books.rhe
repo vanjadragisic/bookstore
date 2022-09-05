@@ -93,3 +93,19 @@
         UniqueMultiple 'Employee Department';
     }
 }
+
+Module Bookstore;
+Entity Bookstore.Book;
+ShortString Bookstore.Book.Code;
+AutoCode Bookstore.Book.Code;
+Required Bookstore.Book.Code;
+Unique Bookstore.Book.Code;
+ShortString Bookstore.Book.Title;
+Required Bookstore.Book.Title;
+Integer Bookstore.Book.NumberOfPages;
+ShortString Bookstore.Book.SomeProperty;
+ItemFilter Bookstore.Book.CommonMisspelling 'book => book.Title.Contains("curiousity")';
+InvalidData Bookstore.Book.CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
+
+Logging Bookstore.Book;
+Reference Bookstore.Book Author Bookstore.Person;

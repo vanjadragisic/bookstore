@@ -22,6 +22,7 @@ namespace System.Linq
                 ID = item.ID,
                 Code = item.Code,
                 NumberOfPages = item.NumberOfPages,
+                SomeProperty = item.SomeProperty,
                 Title = item.Title,
                 AuthorID = item.AuthorID/*DataStructureInfo AssignSimpleProperty Bookstore.Book*/
             });

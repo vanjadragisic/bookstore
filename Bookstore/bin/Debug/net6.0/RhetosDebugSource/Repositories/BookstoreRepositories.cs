@@ -109,6 +109,9 @@ namespace Bookstore.Repositories
                 ShortStringPropertyCodeGenerator.CheckMaxLength(newItem.Code, newItem, "Bookstore", "Book", "Code");
 
             foreach (var newItem in insertedNew.Concat(updatedNew))
+                ShortStringPropertyCodeGenerator.CheckMaxLength(newItem.SomeProperty, newItem, "Bookstore", "Book", "SomeProperty");
+
+            foreach (var newItem in insertedNew.Concat(updatedNew))
                 ShortStringPropertyCodeGenerator.CheckMaxLength(newItem.Title, newItem, "Bookstore", "Book", "Title");
 
             AutoCodeHelper.UpdateCodesWithoutCache(
@@ -168,6 +171,20 @@ namespace Bookstore.Repositories
 
             /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.Book*/
 
+            {
+                var invalid = insertedNew.Concat(updatedNew).FirstOrDefault(item => item.Code == null || string.IsNullOrWhiteSpace(item.Code) /*RequiredPropertyInfo OrCondition Bookstore.Book.Code*/);
+                if (invalid != null)
+                    throw new Rhetos.UserException("It is not allowed to enter {0} because the required property {1} is not set.",
+                        new[] { _localizer["Bookstore.Book"], _localizer["Code"] },
+                        "DataStructure:Bookstore.Book,ID:" + invalid.ID.ToString() + ",Property:Code", null);
+            }
+            {
+                var invalid = insertedNew.Concat(updatedNew).FirstOrDefault(item => item.Title == null || string.IsNullOrWhiteSpace(item.Title) /*RequiredPropertyInfo OrCondition Bookstore.Book.Title*/);
+                if (invalid != null)
+                    throw new Rhetos.UserException("It is not allowed to enter {0} because the required property {1} is not set.",
+                        new[] { _localizer["Bookstore.Book"], _localizer["Title"] },
+                        "DataStructure:Bookstore.Book,ID:" + invalid.ID.ToString() + ",Property:Title", null);
+            }
             /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.Book*/
 
             {
