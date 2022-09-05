@@ -1,32 +1,37 @@
+using Microsoft.OpenApi.Models;
 using Rhetos;
-using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
-void ConfigureRhetosHostBuilder(IServiceProvider serviceProvider, IRhetosHostBuilder rhetosHostBuilder)
-{
-    rhetosHostBuilder
-        .ConfigureRhetosAppDefaults()
-        .UseBuilderLogProviderFromHost(serviceProvider)
-        .ConfigureConfiguration(cfg => cfg.MapNetCoreConfiguration(builder.Configuration));
-}
-
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null)
+    ;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(o => o.CustomSchemaIds(type => type.ToString()));
-builder.Host.UseNLog();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("rhetos", new OpenApiInfo { Title = "Rhetos REST API", Version = "v1" });
+});
 
-builder.Services.AddRhetosHost(ConfigureRhetosHostBuilder)
-    .AddAspNetCoreIdentityUser()
-    .AddHostLogging()
+builder.Services
+    .AddRhetosHost((serviceProvider, rhetosHostBuilder) =>
+    {
+        rhetosHostBuilder
+            .ConfigureRhetosAppDefaults()
+            .UseBuilderLogProviderFromHost(serviceProvider)
+
+            .ConfigureConfiguration(cfg => cfg.MapNetCoreConfiguration(builder.Configuration));
+    })
     .AddRestApi(o =>
     {
-        o.BaseRoute = "rest";
-        o.GroupNameMapper = (conceptInfo, controller, oldName) => "v1";
-    });
+        o.BaseRoute = "rhetos";
+        o.GroupNameMapper = (conceptInfo, controller, oldName) => "rhetos";
+    })
+    //.AddDashboard()
+    .AddAspNetCoreIdentityUser()
+    .AddHostLogging();
 
 var app = builder.Build();
 
@@ -34,15 +39,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
-    app.MapRhetosDashboard();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/rhetos/swagger.json", "Rhetos REST API");
+    });
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
 app.UseRhetosRestApi();
+app.UseAuthorization();
 
 app.MapControllers();
 
