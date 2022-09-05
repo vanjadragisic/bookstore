@@ -616,6 +616,26 @@
     "C:\\Users\\VanjaDragisic\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\lib\\net6.0\\Swashbuckle.AspNetCore.SwaggerUI.dll": {
       "ModifiedTime": "2021-10-16T12:54:30.0000000Z",
       "TypesWithExports": []
+    },
+    "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.dll": {
+      "ModifiedTime": "2022-03-25T16:51:30.0000000Z",
+      "TypesWithExports": []
+    },
+    "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\net5.0\\NLog.Extensions.Logging.dll": {
+      "ModifiedTime": "2022-06-04T21:27:12.0000000Z",
+      "TypesWithExports": []
+    },
+    "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll": {
+      "ModifiedTime": "2022-06-04T22:01:46.0000000Z",
+      "TypesWithExports": []
+    },
+    "C:\\Users\\VanjaDragisic\\.nuget\\packages\\orchardcore.localization.abstractions\\1.4.0\\lib\\net6.0\\OrchardCore.Localization.Abstractions.dll": {
+      "ModifiedTime": "2022-06-01T18:27:44.0000000Z",
+      "TypesWithExports": []
+    },
+    "C:\\Users\\VanjaDragisic\\.nuget\\packages\\orchardcore.localization.core\\1.4.0\\lib\\net6.0\\OrchardCore.Localization.Core.dll": {
+      "ModifiedTime": "2022-06-01T18:28:20.0000000Z",
+      "TypesWithExports": []
     }
   }
 }

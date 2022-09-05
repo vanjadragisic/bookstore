@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[6.0.1, )"
             },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            },
             "Rhetos.CommonConcepts": {
               "target": "Package",
               "version": "[5.2.0, )"
@@ -60,9 +64,17 @@
               "target": "Package",
               "version": "[5.2.0, )"
             },
+            "Rhetos.Host.Net": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
             "Rhetos.MSBuild": {
               "target": "Package",
               "version": "[5.2.0, )"
+            },
+            "Rhetos.RestGenerator": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

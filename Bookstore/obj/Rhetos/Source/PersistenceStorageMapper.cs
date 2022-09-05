@@ -17,6 +17,17 @@ namespace Common
         public PersistenceStorageObjectMappings()
         {
             _mappings.Add(typeof(Bookstore.Book), new Bookstore_Book_Mapper());
+            _mappings.Add(typeof(Bookstore.BookTopic), new Bookstore_BookTopic_Mapper());
+            _mappings.Add(typeof(Bookstore.ChildrensBook), new Bookstore_ChildrensBook_Mapper());
+            _mappings.Add(typeof(Bookstore.Comment), new Bookstore_Comment_Mapper());
+            _mappings.Add(typeof(Bookstore.Department), new Bookstore_Department_Mapper());
+            _mappings.Add(typeof(Bookstore.EducationRecord), new Bookstore_EducationRecord_Mapper());
+            _mappings.Add(typeof(Bookstore.Employee), new Bookstore_Employee_Mapper());
+            _mappings.Add(typeof(Bookstore.EmployeeDepartment), new Bookstore_EmployeeDepartment_Mapper());
+            _mappings.Add(typeof(Bookstore.ForeignBook), new Bookstore_ForeignBook_Mapper());
+            _mappings.Add(typeof(Bookstore.Manager), new Bookstore_Manager_Mapper());
+            _mappings.Add(typeof(Bookstore.Person), new Bookstore_Person_Mapper());
+            _mappings.Add(typeof(Bookstore.Topic), new Bookstore_Topic_Mapper());
             _mappings.Add(typeof(Common.AutoCodeCache), new Common_AutoCodeCache_Mapper());
             _mappings.Add(typeof(Common.Claim), new Common_Claim_Mapper());
             _mappings.Add(typeof(Common.ExclusiveLock), new Common_ExclusiveLock_Mapper());
@@ -54,6 +65,7 @@ namespace Common
                 new PersistenceStorageObjectParameter("Code", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Code) ?? DBNull.Value }),
                 new PersistenceStorageObjectParameter("NumberOfPages", new SqlParameter("", System.Data.SqlDbType.Int) { Value = ((object)entity.NumberOfPages) ?? DBNull.Value }),
                 new PersistenceStorageObjectParameter("Title", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Title) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("AuthorID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.AuthorID) ?? DBNull.Value }),
                 /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Book*/
             };
         }
@@ -68,6 +80,302 @@ namespace Common
     	public string GetTableName()
         {
             return "Bookstore.Book";
+        }
+    }
+
+    public class Bookstore_BookTopic_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.BookTopic)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("BookID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.BookID) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("TopicID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.TopicID) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.BookTopic*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.BookTopic)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.BookTopic*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.BookTopic";
+        }
+    }
+
+    public class Bookstore_ChildrensBook_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ChildrensBook)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("AgeFrom", new SqlParameter("", System.Data.SqlDbType.Int) { Value = ((object)entity.AgeFrom) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("AgeTo", new SqlParameter("", System.Data.SqlDbType.Int) { Value = ((object)entity.AgeTo) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.ChildrensBook*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ChildrensBook)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.ChildrensBook*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.ChildrensBook";
+        }
+    }
+
+    public class Bookstore_Comment_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Comment)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("BookID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.BookID) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("Text", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Text) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Comment*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Comment)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Comment*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Comment";
+        }
+    }
+
+    public class Bookstore_Department_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Department)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Code", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Code) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("Description", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Description) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Department*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Department)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Department*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Department";
+        }
+    }
+
+    public class Bookstore_EducationRecord_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.EducationRecord)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Description", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Description) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("RecordDate", new SqlParameter("", System.Data.SqlDbType.DateTime2) { Value = ((object)entity.RecordDate) ?? DBNull.Value, Scale = 3 }),
+                new PersistenceStorageObjectParameter("EmployeeID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.EmployeeID) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.EducationRecord*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.EducationRecord)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.EducationRecord*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.EducationRecord";
+        }
+    }
+
+    public class Bookstore_Employee_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Employee)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Name", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Name) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("VatNumber", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.VatNumber) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Employee*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Employee)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Employee*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Employee";
+        }
+    }
+
+    public class Bookstore_EmployeeDepartment_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.EmployeeDepartment)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("DepartmentID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.DepartmentID) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("EmployeeID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.EmployeeID) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.EmployeeDepartment*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.EmployeeDepartment)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.EmployeeDepartment*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.EmployeeDepartment";
+        }
+    }
+
+    public class Bookstore_ForeignBook_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ForeignBook)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("OriginalLanguage", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.OriginalLanguage) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("TranslatorID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.TranslatorID) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.ForeignBook*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ForeignBook)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.ForeignBook*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.ForeignBook";
+        }
+    }
+
+    public class Bookstore_Manager_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Manager)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Bonuses", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Bonuses) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("EmployeeID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.EmployeeID) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Manager*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Manager)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Manager*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Manager";
+        }
+    }
+
+    public class Bookstore_Person_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Person)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Name", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Name) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Person*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Person)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Person*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Person";
+        }
+    }
+
+    public class Bookstore_Topic_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Topic)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Name", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Name) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Topic*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Topic)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Topic*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Topic";
         }
     }
 

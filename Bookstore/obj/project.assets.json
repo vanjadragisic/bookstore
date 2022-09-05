@@ -648,7 +648,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "NLog/4.7.11": {
+      "NLog/4.7.15": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/NLog.dll": {}
@@ -656,6 +656,35 @@
         "runtime": {
           "lib/netstandard2.0/NLog.dll": {}
         }
+      },
+      "NLog.Extensions.Logging/1.7.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "NLog": "4.7.15"
+        },
+        "compile": {
+          "lib/net5.0/NLog.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Web.AspNetCore/4.15.0": {
+        "type": "package",
+        "dependencies": {
+          "NLog.Extensions.Logging": "1.7.5"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/NLog.Web.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/NLog.Web.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Oracle.ManagedDataAccess.Core/3.21.50": {
         "type": "package",
@@ -857,6 +886,22 @@
           "build/Rhetos.MSBuild.props": {},
           "build/Rhetos.MSBuild.targets": {}
         }
+      },
+      "Rhetos.RestGenerator/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Rhetos.CommonConcepts": "5.0.0",
+          "Rhetos.Host.AspNet": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rhetos.Host.AspNet.RestApi.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Rhetos.Host.AspNet.RestApi.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
@@ -2535,10 +2580,10 @@
         "packageIcon.png"
       ]
     },
-    "NLog/4.7.11": {
-      "sha512": "A7EpoOjWesV5BPx1cOiBndazZq1VGdagIs6oK8ttcRDl5adCMtHiTqnsD5yYaOrMxOQeCjHBf/w3nKzCmhGbgw==",
+    "NLog/4.7.15": {
+      "sha512": "vXMmsK17hXnMsKd8BdCrJzvb8JMT0+cPgBGRfnqcXIb6y8b6RMIZexO4hMhQgifcTHgU7dbubvCR5A5wX6Ne+A==",
       "type": "package",
-      "path": "nlog/4.7.11",
+      "path": "nlog/4.7.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2564,8 +2609,57 @@
         "lib/wp8/NLog.xml",
         "lib/xamarinios10/NLog.dll",
         "lib/xamarinios10/NLog.xml",
-        "nlog.4.7.11.nupkg.sha512",
+        "nlog.4.7.15.nupkg.sha512",
         "nlog.nuspec"
+      ]
+    },
+    "NLog.Extensions.Logging/1.7.5": {
+      "sha512": "WhMX4dg63Xktmi3hqnAlsh1YgPCRyWpqVhmNraMwCoV+ZTbr/ghOpHOOire7olNeJ5BY0prRPU4lDjLz61Wi5Q==",
+      "type": "package",
+      "path": "nlog.extensions.logging/1.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net451/NLog.Extensions.Logging.dll",
+        "lib/net451/NLog.Extensions.Logging.xml",
+        "lib/net461/NLog.Extensions.Logging.dll",
+        "lib/net461/NLog.Extensions.Logging.xml",
+        "lib/net5.0/NLog.Extensions.Logging.dll",
+        "lib/net5.0/NLog.Extensions.Logging.xml",
+        "lib/netcoreapp3.0/NLog.Extensions.Logging.dll",
+        "lib/netcoreapp3.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.3/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.3/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.5/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.5/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.0/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.0/NLog.Extensions.Logging.xml",
+        "nlog.extensions.logging.1.7.5.nupkg.sha512",
+        "nlog.extensions.logging.nuspec"
+      ]
+    },
+    "NLog.Web.AspNetCore/4.15.0": {
+      "sha512": "5WUrb/B+mJPUoI1RcRptVndijgGW8dr9ZnMGzFL0QhHD9YnhsJ/Z3+lLQjoMWz924Bx0j+OaWBKZB+LeIbJAsg==",
+      "type": "package",
+      "path": "nlog.web.aspnetcore/4.15.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net451/NLog.Web.AspNetCore.dll",
+        "lib/net451/NLog.Web.AspNetCore.xml",
+        "lib/net461/NLog.Web.AspNetCore.dll",
+        "lib/net461/NLog.Web.AspNetCore.xml",
+        "lib/netcoreapp3.0/NLog.Web.AspNetCore.dll",
+        "lib/netcoreapp3.0/NLog.Web.AspNetCore.xml",
+        "lib/netstandard1.5/NLog.Web.AspNetCore.dll",
+        "lib/netstandard1.5/NLog.Web.AspNetCore.xml",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.dll",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.xml",
+        "nlog.web.aspnetcore.4.15.0.nupkg.sha512",
+        "nlog.web.aspnetcore.nuspec",
+        "readme.txt"
       ]
     },
     "Oracle.ManagedDataAccess.Core/3.21.50": {
@@ -2874,6 +2968,22 @@
         "tools/runtimes/win/lib/netcoreapp2.0/System.DirectoryServices.Protocols.dll",
         "tools/runtimes/win/lib/netcoreapp2.0/System.DirectoryServices.dll",
         "tools/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll"
+      ]
+    },
+    "Rhetos.RestGenerator/5.0.0": {
+      "sha512": "+YHVCuCDhGaCae6DQ+vXq6PRsPIpbwDRma03Qc77NYANagSxQWTucMJrbWhn0kaswNHoW8sHz19NtCMWmEGWNA==",
+      "type": "package",
+      "path": "rhetos.restgenerator/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ChangeLog.md",
+        "Readme.md",
+        "lib/net5.0/Rhetos.Host.AspNet.RestApi.dll",
+        "lib/net5.0/Rhetos.Host.AspNet.RestApi.pdb",
+        "lib/net5.0/Rhetos.Host.AspNet.RestApi.xml",
+        "rhetos.restgenerator.5.0.0.nupkg.sha512",
+        "rhetos.restgenerator.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -3983,10 +4093,13 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.Extensions.Configuration >= 6.0.1",
+      "NLog.Web.AspNetCore >= 4.15.0",
       "Rhetos.CommonConcepts >= 5.2.0",
       "Rhetos.Host >= 5.2.0",
       "Rhetos.Host.AspNet >= 5.2.0",
+      "Rhetos.Host.Net >= 5.2.0",
       "Rhetos.MSBuild >= 5.2.0",
+      "Rhetos.RestGenerator >= 5.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -4038,6 +4151,10 @@
             "target": "Package",
             "version": "[6.0.1, )"
           },
+          "NLog.Web.AspNetCore": {
+            "target": "Package",
+            "version": "[4.15.0, )"
+          },
           "Rhetos.CommonConcepts": {
             "target": "Package",
             "version": "[5.2.0, )"
@@ -4050,9 +4167,17 @@
             "target": "Package",
             "version": "[5.2.0, )"
           },
+          "Rhetos.Host.Net": {
+            "target": "Package",
+            "version": "[5.2.0, )"
+          },
           "Rhetos.MSBuild": {
             "target": "Package",
             "version": "[5.2.0, )"
+          },
+          "Rhetos.RestGenerator": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

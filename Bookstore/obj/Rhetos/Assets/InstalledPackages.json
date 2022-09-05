@@ -2392,112 +2392,112 @@
     },
     {
       "Id": "NLog",
-      "Version": "4.7.11.0",
+      "Version": "4.7.15.0",
       "Dependencies": [],
-      "Folder": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11",
+      "Folder": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15",
       "ContentFiles": [
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\.nupkg.metadata",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\.nupkg.metadata",
           "InPackagePath": ".nupkg.metadata"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\.signature.p7s",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\.signature.p7s",
           "InPackagePath": ".signature.p7s"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\monoandroid44\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\monoandroid44\\NLog.dll",
           "InPackagePath": "lib\\monoandroid44\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\monoandroid44\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\monoandroid44\\NLog.xml",
           "InPackagePath": "lib\\monoandroid44\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\net35\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\net35\\NLog.dll",
           "InPackagePath": "lib\\net35\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\net35\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\net35\\NLog.xml",
           "InPackagePath": "lib\\net35\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\net40-client\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\net40-client\\NLog.dll",
           "InPackagePath": "lib\\net40-client\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\net40-client\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\net40-client\\NLog.xml",
           "InPackagePath": "lib\\net40-client\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\net45\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\net45\\NLog.dll",
           "InPackagePath": "lib\\net45\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\net45\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\net45\\NLog.xml",
           "InPackagePath": "lib\\net45\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\netstandard1.3\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\netstandard1.3\\NLog.dll",
           "InPackagePath": "lib\\netstandard1.3\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\netstandard1.3\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\netstandard1.3\\NLog.xml",
           "InPackagePath": "lib\\netstandard1.3\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\netstandard1.5\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\netstandard1.5\\NLog.dll",
           "InPackagePath": "lib\\netstandard1.5\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\netstandard1.5\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\netstandard1.5\\NLog.xml",
           "InPackagePath": "lib\\netstandard1.5\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\netstandard2.0\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\netstandard2.0\\NLog.dll",
           "InPackagePath": "lib\\netstandard2.0\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\netstandard2.0\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\netstandard2.0\\NLog.xml",
           "InPackagePath": "lib\\netstandard2.0\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\sl4\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\sl4\\NLog.dll",
           "InPackagePath": "lib\\sl4\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\sl4\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\sl4\\NLog.xml",
           "InPackagePath": "lib\\sl4\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\sl5\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\sl5\\NLog.dll",
           "InPackagePath": "lib\\sl5\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\sl5\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\sl5\\NLog.xml",
           "InPackagePath": "lib\\sl5\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\wp8\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\wp8\\NLog.dll",
           "InPackagePath": "lib\\wp8\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\wp8\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\wp8\\NLog.xml",
           "InPackagePath": "lib\\wp8\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\xamarinios10\\NLog.dll",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\xamarinios10\\NLog.dll",
           "InPackagePath": "lib\\xamarinios10\\NLog.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\lib\\xamarinios10\\NLog.xml",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\lib\\xamarinios10\\NLog.xml",
           "InPackagePath": "lib\\xamarinios10\\NLog.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
-          "InPackagePath": "nlog.4.7.11.nupkg.sha512"
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\nlog.4.7.15.nupkg.sha512",
+          "InPackagePath": "nlog.4.7.15.nupkg.sha512"
         },
         {
-          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.11\\nlog.nuspec",
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog\\4.7.15\\nlog.nuspec",
           "InPackagePath": "nlog.nuspec"
         }
       ]
@@ -5647,6 +5647,180 @@
         {
           "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\useSharedDesignerContext.txt",
           "InPackagePath": "useSharedDesignerContext.txt"
+        }
+      ]
+    },
+    {
+      "Id": "NLog.Extensions.Logging",
+      "Version": "1.7.5.0",
+      "Dependencies": [
+        {
+          "Id": "Microsoft.Extensions.Configuration.Abstractions",
+          "VersionsRange": "5.0.0"
+        },
+        {
+          "Id": "Microsoft.Extensions.Logging",
+          "VersionsRange": "5.0.0"
+        },
+        {
+          "Id": "NLog",
+          "VersionsRange": "4.7.15"
+        }
+      ],
+      "Folder": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\N.png",
+          "InPackagePath": "N.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\net451\\NLog.Extensions.Logging.dll",
+          "InPackagePath": "lib\\net451\\NLog.Extensions.Logging.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\net451\\NLog.Extensions.Logging.xml",
+          "InPackagePath": "lib\\net451\\NLog.Extensions.Logging.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\net461\\NLog.Extensions.Logging.dll",
+          "InPackagePath": "lib\\net461\\NLog.Extensions.Logging.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\net461\\NLog.Extensions.Logging.xml",
+          "InPackagePath": "lib\\net461\\NLog.Extensions.Logging.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\net5.0\\NLog.Extensions.Logging.dll",
+          "InPackagePath": "lib\\net5.0\\NLog.Extensions.Logging.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\net5.0\\NLog.Extensions.Logging.xml",
+          "InPackagePath": "lib\\net5.0\\NLog.Extensions.Logging.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netcoreapp3.0\\NLog.Extensions.Logging.dll",
+          "InPackagePath": "lib\\netcoreapp3.0\\NLog.Extensions.Logging.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netcoreapp3.0\\NLog.Extensions.Logging.xml",
+          "InPackagePath": "lib\\netcoreapp3.0\\NLog.Extensions.Logging.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netstandard1.3\\NLog.Extensions.Logging.dll",
+          "InPackagePath": "lib\\netstandard1.3\\NLog.Extensions.Logging.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netstandard1.3\\NLog.Extensions.Logging.xml",
+          "InPackagePath": "lib\\netstandard1.3\\NLog.Extensions.Logging.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netstandard1.5\\NLog.Extensions.Logging.dll",
+          "InPackagePath": "lib\\netstandard1.5\\NLog.Extensions.Logging.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netstandard1.5\\NLog.Extensions.Logging.xml",
+          "InPackagePath": "lib\\netstandard1.5\\NLog.Extensions.Logging.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netstandard2.0\\NLog.Extensions.Logging.dll",
+          "InPackagePath": "lib\\netstandard2.0\\NLog.Extensions.Logging.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\lib\\netstandard2.0\\NLog.Extensions.Logging.xml",
+          "InPackagePath": "lib\\netstandard2.0\\NLog.Extensions.Logging.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\nlog.extensions.logging.1.7.5.nupkg.sha512",
+          "InPackagePath": "nlog.extensions.logging.1.7.5.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.extensions.logging\\1.7.5\\nlog.extensions.logging.nuspec",
+          "InPackagePath": "nlog.extensions.logging.nuspec"
+        }
+      ]
+    },
+    {
+      "Id": "NLog.Web.AspNetCore",
+      "Version": "4.15.0.0",
+      "Dependencies": [
+        {
+          "Id": "NLog.Extensions.Logging",
+          "VersionsRange": "1.7.5"
+        }
+      ],
+      "Folder": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\N.png",
+          "InPackagePath": "N.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\net451\\NLog.Web.AspNetCore.dll",
+          "InPackagePath": "lib\\net451\\NLog.Web.AspNetCore.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\net451\\NLog.Web.AspNetCore.xml",
+          "InPackagePath": "lib\\net451\\NLog.Web.AspNetCore.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\net461\\NLog.Web.AspNetCore.dll",
+          "InPackagePath": "lib\\net461\\NLog.Web.AspNetCore.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\net461\\NLog.Web.AspNetCore.xml",
+          "InPackagePath": "lib\\net461\\NLog.Web.AspNetCore.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll",
+          "InPackagePath": "lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.xml",
+          "InPackagePath": "lib\\netcoreapp3.0\\NLog.Web.AspNetCore.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\netstandard1.5\\NLog.Web.AspNetCore.dll",
+          "InPackagePath": "lib\\netstandard1.5\\NLog.Web.AspNetCore.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\netstandard1.5\\NLog.Web.AspNetCore.xml",
+          "InPackagePath": "lib\\netstandard1.5\\NLog.Web.AspNetCore.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\netstandard2.0\\NLog.Web.AspNetCore.dll",
+          "InPackagePath": "lib\\netstandard2.0\\NLog.Web.AspNetCore.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\lib\\netstandard2.0\\NLog.Web.AspNetCore.xml",
+          "InPackagePath": "lib\\netstandard2.0\\NLog.Web.AspNetCore.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\nlog.web.aspnetcore.4.15.0.nupkg.sha512",
+          "InPackagePath": "nlog.web.aspnetcore.4.15.0.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\nlog.web.aspnetcore.nuspec",
+          "InPackagePath": "nlog.web.aspnetcore.nuspec"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\nlog.web.aspnetcore\\4.15.0\\readme.txt",
+          "InPackagePath": "readme.txt"
         }
       ]
     },
@@ -9283,12 +9457,69 @@
       ]
     },
     {
+      "Id": "Rhetos.RestGenerator",
+      "Version": "5.0.0.0",
+      "Dependencies": [
+        {
+          "Id": "Rhetos.CommonConcepts",
+          "VersionsRange": "5.0.0"
+        },
+        {
+          "Id": "Rhetos.Host.AspNet",
+          "VersionsRange": "5.0.0"
+        }
+      ],
+      "Folder": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\ChangeLog.md",
+          "InPackagePath": "ChangeLog.md"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\Readme.md",
+          "InPackagePath": "Readme.md"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.dll",
+          "InPackagePath": "lib\\net5.0\\Rhetos.Host.AspNet.RestApi.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.pdb",
+          "InPackagePath": "lib\\net5.0\\Rhetos.Host.AspNet.RestApi.pdb"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.xml",
+          "InPackagePath": "lib\\net5.0\\Rhetos.Host.AspNet.RestApi.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\rhetos.restgenerator.5.0.0.nupkg.sha512",
+          "InPackagePath": "rhetos.restgenerator.5.0.0.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\rhetos.restgenerator.nuspec",
+          "InPackagePath": "rhetos.restgenerator.nuspec"
+        }
+      ]
+    },
+    {
       "Id": "Bookstore",
       "Version": "",
       "Dependencies": [
         {
           "Id": "Microsoft.Extensions.Configuration",
           "VersionsRange": "[6.0.1, )"
+        },
+        {
+          "Id": "NLog.Web.AspNetCore",
+          "VersionsRange": "[4.15.0, )"
         },
         {
           "Id": "Rhetos.CommonConcepts",
@@ -9303,8 +9534,16 @@
           "VersionsRange": "[5.2.0, )"
         },
         {
+          "Id": "Rhetos.Host.Net",
+          "VersionsRange": "[5.2.0, )"
+        },
+        {
           "Id": "Rhetos.MSBuild",
           "VersionsRange": "[5.2.0, )"
+        },
+        {
+          "Id": "Rhetos.RestGenerator",
+          "VersionsRange": "[5.0.0, )"
         },
         {
           "Id": "Swashbuckle.AspNetCore",

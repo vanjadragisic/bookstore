@@ -1,4 +1,5 @@
 using Rhetos;
+using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,11 +16,17 @@ void ConfigureRhetosHostBuilder(IServiceProvider serviceProvider, IRhetosHostBui
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(o => o.CustomSchemaIds(type => type.ToString()));
+builder.Host.UseNLog();
 
 builder.Services.AddRhetosHost(ConfigureRhetosHostBuilder)
     .AddAspNetCoreIdentityUser()
-    .AddHostLogging();
+    .AddHostLogging()
+    .AddRestApi(o =>
+    {
+        o.BaseRoute = "rest";
+        o.GroupNameMapper = (conceptInfo, controller, oldName) => "v1";
+    });
 
 var app = builder.Build();
 
@@ -28,11 +35,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.MapRhetosDashboard();
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseRhetosRestApi();
 
 app.MapControllers();
 

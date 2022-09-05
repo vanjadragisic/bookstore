@@ -8,6 +8,105 @@
         <ScalarProperty Name="Code" ColumnName="Code" />
         <ScalarProperty Name="NumberOfPages" ColumnName="NumberOfPages" />
         <ScalarProperty Name="Title" ColumnName="Title" />
+        <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_BookTopic">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_BookTopic">
+      <MappingFragment StoreEntitySet="Bookstore_BookTopic">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BookID" ColumnName="BookID" />
+        <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_ChildrensBook">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_ChildrensBook">
+      <MappingFragment StoreEntitySet="Bookstore_ChildrensBook">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="AgeFrom" ColumnName="AgeFrom" />
+        <ScalarProperty Name="AgeTo" ColumnName="AgeTo" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Comment">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Comment">
+      <MappingFragment StoreEntitySet="Bookstore_Comment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BookID" ColumnName="BookID" />
+        <ScalarProperty Name="Text" ColumnName="Text" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Department">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Department">
+      <MappingFragment StoreEntitySet="Bookstore_Department">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Code" ColumnName="Code" />
+        <ScalarProperty Name="Description" ColumnName="Description" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_EducationRecord">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_EducationRecord">
+      <MappingFragment StoreEntitySet="Bookstore_EducationRecord">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Description" ColumnName="Description" />
+        <ScalarProperty Name="RecordDate" ColumnName="RecordDate" />
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Employee">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Employee">
+      <MappingFragment StoreEntitySet="Bookstore_Employee">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
+        <ScalarProperty Name="VatNumber" ColumnName="VatNumber" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_EmployeeDepartment">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_EmployeeDepartment">
+      <MappingFragment StoreEntitySet="Bookstore_EmployeeDepartment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_ForeignBook">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_ForeignBook">
+      <MappingFragment StoreEntitySet="Bookstore_ForeignBook">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="OriginalLanguage" ColumnName="OriginalLanguage" />
+        <ScalarProperty Name="TranslatorID" ColumnName="TranslatorID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Manager">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Manager">
+      <MappingFragment StoreEntitySet="Bookstore_Manager">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Bonuses" ColumnName="Bonuses" />
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Person">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Person">
+      <MappingFragment StoreEntitySet="Bookstore_Person">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Topic">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Topic">
+      <MappingFragment StoreEntitySet="Bookstore_Topic">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>

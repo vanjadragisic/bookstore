@@ -41,6 +41,17 @@ namespace Common
         }
 
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Book> Bookstore_Book { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTopic> Bookstore_BookTopic { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ChildrensBook> Bookstore_ChildrensBook { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Comment> Bookstore_Comment { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Department> Bookstore_Department { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_EducationRecord> Bookstore_EducationRecord { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Employee> Bookstore_Employee { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_EmployeeDepartment> Bookstore_EmployeeDepartment { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ForeignBook> Bookstore_ForeignBook { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Manager> Bookstore_Manager { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Person> Bookstore_Person { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Topic> Bookstore_Topic { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_AutoCodeCache> Common_AutoCodeCache { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_Claim> Common_Claim { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_ExclusiveLock> Common_ExclusiveLock { get; set; }

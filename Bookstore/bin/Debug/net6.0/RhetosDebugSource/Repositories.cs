@@ -56,6 +56,17 @@ namespace Common
         public static readonly Dictionary<string, Func<KeyValuePair<string, Type>[]>> DataStructuresReadParameterTypes = new()
         {
             { "Bookstore.Book", Bookstore.Repositories.Book_Repository.GetReadParameterTypes },
+            { "Bookstore.BookTopic", Bookstore.Repositories.BookTopic_Repository.GetReadParameterTypes },
+            { "Bookstore.ChildrensBook", Bookstore.Repositories.ChildrensBook_Repository.GetReadParameterTypes },
+            { "Bookstore.Comment", Bookstore.Repositories.Comment_Repository.GetReadParameterTypes },
+            { "Bookstore.Department", Bookstore.Repositories.Department_Repository.GetReadParameterTypes },
+            { "Bookstore.EducationRecord", Bookstore.Repositories.EducationRecord_Repository.GetReadParameterTypes },
+            { "Bookstore.Employee", Bookstore.Repositories.Employee_Repository.GetReadParameterTypes },
+            { "Bookstore.EmployeeDepartment", Bookstore.Repositories.EmployeeDepartment_Repository.GetReadParameterTypes },
+            { "Bookstore.ForeignBook", Bookstore.Repositories.ForeignBook_Repository.GetReadParameterTypes },
+            { "Bookstore.Manager", Bookstore.Repositories.Manager_Repository.GetReadParameterTypes },
+            { "Bookstore.Person", Bookstore.Repositories.Person_Repository.GetReadParameterTypes },
+            { "Bookstore.Topic", Bookstore.Repositories.Topic_Repository.GetReadParameterTypes },
             { "Common.AutoCodeCache", Common.Repositories.AutoCodeCache_Repository.GetReadParameterTypes },
             { "Common.Claim", Common.Repositories.Claim_Repository.GetReadParameterTypes },
             { "Common.ExclusiveLock", Common.Repositories.ExclusiveLock_Repository.GetReadParameterTypes },
@@ -186,6 +197,17 @@ namespace Common
             
             builder.RegisterInstance(Infrastructure.CurrentKeepSynchronizedMetadata).ExternallyOwned();
             builder.RegisterType<Bookstore.Repositories.Book_Repository>().Keyed<IRepository>("Bookstore.Book").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.BookTopic_Repository>().Keyed<IRepository>("Bookstore.BookTopic").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.ChildrensBook_Repository>().Keyed<IRepository>("Bookstore.ChildrensBook").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.Comment_Repository>().Keyed<IRepository>("Bookstore.Comment").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.Department_Repository>().Keyed<IRepository>("Bookstore.Department").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.EducationRecord_Repository>().Keyed<IRepository>("Bookstore.EducationRecord").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.Employee_Repository>().Keyed<IRepository>("Bookstore.Employee").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.EmployeeDepartment_Repository>().Keyed<IRepository>("Bookstore.EmployeeDepartment").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.ForeignBook_Repository>().Keyed<IRepository>("Bookstore.ForeignBook").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.Manager_Repository>().Keyed<IRepository>("Bookstore.Manager").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.Person_Repository>().Keyed<IRepository>("Bookstore.Person").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.Topic_Repository>().Keyed<IRepository>("Bookstore.Topic").InstancePerLifetimeScope();
             builder.RegisterType<Common.Repositories.AddToLog_Repository>().Keyed<IRepository>("Common.AddToLog").InstancePerLifetimeScope();
             builder.RegisterType<Common.Repositories.AddToLog_Repository>().Keyed<IActionRepository>("Common.AddToLog").InstancePerLifetimeScope();
             builder.RegisterType<Common.Repositories.AutoCodeCache_Repository>().Keyed<IRepository>("Common.AutoCodeCache").InstancePerLifetimeScope();
