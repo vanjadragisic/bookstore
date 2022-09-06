@@ -987,3 +987,30 @@
 2022-09-06 09:42:34.4117|INFO|ApplicationInitialization|Initialization ClaimGenerator.
 2022-09-06 09:42:35.0261|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
 2022-09-06 09:42:35.0261|INFO|Rhetos DbUpdate|Done.
+2022-09-06 11:03:27.6101|INFO|Rhetos DbUpdate base|Started 'dotnet' process 5344.
+2022-09-06 11:03:28.0274|INFO|Rhetos DbUpdate|Started in C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\bin\Debug\net6.0\
+2022-09-06 11:03:28.0788|INFO|DatabaseUpdate|Loading plugins.
+2022-09-06 11:03:28.5450|INFO|DatabaseDeployment|SQL connection: DataSource=(localdb)\MSSQLLocalDB, InitialCatalog=Bookstore
+2022-09-06 11:03:28.7564|INFO|DatabaseDeployment|Preparing Rhetos database.
+2022-09-06 11:03:29.0600|INFO|DatabaseDeployment|Cleaning old migration data.
+2022-09-06 11:03:29.1221|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 17 remaining.
+2022-09-06 11:03:29.1274|INFO|DatabaseDeployment|Executing data migration scripts.
+2022-09-06 11:03:29.1274|INFO|ConceptDataMigration|Executing 1 before-data-migration scripts.
+2022-09-06 11:03:29.5251|INFO|DataMigration|Executed 0 of 12 scripts.
+2022-09-06 11:03:29.5251|INFO|ConceptDataMigration|Executing 1 after-data-migration scripts.
+2022-09-06 11:03:29.5570|INFO|DatabaseDeployment|Upgrading database.
+2022-09-06 11:03:29.6118|TRACE|DatabaseGeneratorChanges|Changed concept application: DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition
+Old: CREATE VIEW Bookstore.BookInfo AS \r\n            SELECT\r\n                b.ID,\r\n                NumberOfComments = COUNT(c.ID)\r\n            FROM\r\n                Bookstore.Book b\r\n                LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n            GROUP BY\r\n                b.ID
+New: CREATE VIEW Bookstore.BookInfo AS \r\n            SELECT\r\n                b.ID,\r\n                NumberOfTopics = COUNT(c.ID)\r\n            FROM\r\n                Bookstore.Book b\r\n                LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n            GROUP BY\r\n                b.ID
+2022-09-06 11:03:29.6118|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=95A0835E-07B3-4162-AF1D-8CA6D15AEDA2.
+2022-09-06 11:03:29.6253|INFO|DatabaseGenerator|Removing 1 database objects.
+2022-09-06 11:03:29.6253|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Manager/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=B45111FD-23EE-4F5C-8F3F-ED806A2C9F8F.
+2022-09-06 11:03:29.6253|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=95A0835E-07B3-4162-AF1D-8CA6D15AEDA2.
+2022-09-06 11:03:29.6253|INFO|DatabaseGenerator|Creating 2 database objects.
+2022-09-06 11:03:29.6745|INFO|DatabaseDeployment|Deleting redundant migration data.
+2022-09-06 11:03:29.7003|INFO|DatabaseCleaner|Deleted 4 columns in data migration schemas, 17 remaining.
+2022-09-06 11:03:29.7003|INFO|ApplicationInitialization|Loading generated plugins.
+2022-09-06 11:03:29.7746|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2022-09-06 11:03:30.5596|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2022-09-06 11:03:31.2210|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2022-09-06 11:03:31.2374|INFO|Rhetos DbUpdate|Done.

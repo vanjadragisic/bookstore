@@ -66,7 +66,7 @@
         "
             SELECT
                 b.ID,
-                NumberOfComments = COUNT(c.ID)
+                NumberOfTopics = COUNT(c.ID)
             FROM
                 Bookstore.Book b
                 LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID
@@ -79,6 +79,23 @@
 
         AutodetectSqlDependencies;
     }
+
+        //SqlQueryable BookTopicInfo
+        //"
+        //    SELECT
+       //         NumberOfTopics = COUNT(b.TopicId)
+        //    FROM
+         //   Bookstore.BookTopic b
+          //  GROUP BY
+           //     b.BookId
+        //"
+    //{
+      //  Extends Bookstore.Book;
+       // Extends Bookstore.Topic;
+       // Integer NumberOfTopics;
+
+//        AutodetectSqlDependencies;
+  //  }
 
     Browse PersonGrid Bookstore.Person
     {
