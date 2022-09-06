@@ -7,9 +7,16 @@
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Code" ColumnName="Code" />
         <ScalarProperty Name="NumberOfPages" ColumnName="NumberOfPages" />
-        <ScalarProperty Name="SomeProperty" ColumnName="SomeProperty" />
         <ScalarProperty Name="Title" ColumnName="Title" />
         <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_BookInfo">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_BookInfo">
+      <MappingFragment StoreEntitySet="Bookstore_BookInfo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="NumberOfComments" ColumnName="NumberOfComments" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -63,8 +70,14 @@
     <EntityTypeMapping TypeName="Rhetos.Bookstore_Employee">
       <MappingFragment StoreEntitySet="Bookstore_Employee">
         <ScalarProperty Name="ID" ColumnName="ID" />
-        <ScalarProperty Name="Name" ColumnName="Name" />
-        <ScalarProperty Name="VatNumber" ColumnName="VatNumber" />
+        <ScalarProperty Name="Code" ColumnName="Code" />
+        <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+        <ScalarProperty Name="Iban" ColumnName="Iban" />
+        <ScalarProperty Name="IdentificationNumber" ColumnName="IdentificationNumber" />
+        <ScalarProperty Name="LastName" ColumnName="LastName" />
+        <ScalarProperty Name="TestPeriod" ColumnName="TestPeriod" />
+        <ScalarProperty Name="WorkFinished" ColumnName="WorkFinished" />
+        <ScalarProperty Name="WorkStarted" ColumnName="WorkStarted" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -83,6 +96,17 @@
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="OriginalLanguage" ColumnName="OriginalLanguage" />
         <ScalarProperty Name="TranslatorID" ColumnName="TranslatorID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Genre">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Genre">
+      <MappingFragment StoreEntitySet="Bookstore_Genre">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Description" ColumnName="Description" />
+        <ScalarProperty Name="IsFiction" ColumnName="IsFiction" />
+        <ScalarProperty Name="Label" ColumnName="Label" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>

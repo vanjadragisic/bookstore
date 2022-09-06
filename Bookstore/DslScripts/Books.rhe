@@ -56,10 +56,22 @@
 
     //EMPLOYEES MANAGEMENT
 
-    Entity Employee 
+    Entity Employee
     {
-        ShortString Name;
-        ShortString VatNumber { Unique; }
+        Integer IdentificationNumber;
+        ShortString LastName { Required; }
+        ShortString FirstName { Required; }
+        ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }
+        DateTime WorkStarted { Required; }
+        DateTime WorkFinished;
+        Integer TestPeriod { MinValue 1; MaxValue 12; }
+        ShortString Iban { Required; Unique; MinLength 21; MaxLength 21; }
+
+        UniqueMultiple 'LastName FirstName';
+
+        ItemFilter FinishBeforeStart 'employee => employee.WorkFinished != null
+            && employee.WorkFinished.Value < employee.WorkStarted.Value';
+        InvalidData FinishBeforeStart 'It is not allowed to enter a WorkFinished time before the WorkStarted time.';
     }
 
     Entity Manager
@@ -92,20 +104,72 @@
 
         UniqueMultiple 'Employee Department';
     }
+
+    Browse BookGrid Bookstore.Book
+    {
+        Take Code;
+        Take Title;
+        Take 'Author.Name';
+        Take TranslatorName 'Extension_ForeignBook.Translator.Name';
+    }
+
+    SqlQueryable BookInfo
+        "
+            SELECT
+                b.ID,
+                NumberOfComments = COUNT(c.ID)
+            FROM
+                Bookstore.Book b
+                LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID
+            GROUP BY
+                b.ID
+        "
+    {
+        Extends Bookstore.Book;
+        Integer NumberOfComments;
+
+        AutodetectSqlDependencies;
+    }
+
+    Browse PersonGrid Bookstore.Person
+    {
+        Take Name;
+    }
+
+    Hardcoded Genre
+{
+    ShortString Label; // Short text displayed to user.
+    LongString Description;
+    Bool IsFiction;
+
+    Entry ScienceFiction
+    {
+        Value Label 'Science fiction';
+        Value Description 'A speculative fiction with imagined elements that are inspired by natural sciences or social sciences.';
+        Value IsFiction 1;
+    }
+
+    Entry Biography
+    {
+        Value Label 'Biography';
+        Value Description 'A written narrative of a person''s life.';
+        Value IsFiction 0;
+    }
+}
 }
 
-Module Bookstore;
-Entity Bookstore.Book;
-ShortString Bookstore.Book.Code;
-AutoCode Bookstore.Book.Code;
-Required Bookstore.Book.Code;
-Unique Bookstore.Book.Code;
-ShortString Bookstore.Book.Title;
-Required Bookstore.Book.Title;
-Integer Bookstore.Book.NumberOfPages;
-ShortString Bookstore.Book.SomeProperty;
-ItemFilter Bookstore.Book.CommonMisspelling 'book => book.Title.Contains("curiousity")';
-InvalidData Bookstore.Book.CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
+//Module Bookstore;
+//Entity Bookstore.Book;
+//ShortString Bookstore.Book.Code;
+//AutoCode Bookstore.Book.Code;
+//Required Bookstore.Book.Code;
+//Unique Bookstore.Book.Code;
+//ShortString Bookstore.Book.Title;
+//Required Bookstore.Book.Title;
+//Integer Bookstore.Book.NumberOfPages;
+//ShortString Bookstore.Book.SomeProperty;
+//ItemFilter Bookstore.Book.CommonMisspelling 'book => book.Title.Contains("curiousity")';
+//InvalidData Bookstore.Book.CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
 
-Logging Bookstore.Book;
-Reference Bookstore.Book Author Bookstore.Person;
+//Logging Bookstore.Book;
+//Reference Bookstore.Book Author Bookstore.Person;

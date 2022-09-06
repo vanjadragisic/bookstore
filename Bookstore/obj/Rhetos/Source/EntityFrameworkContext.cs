@@ -41,6 +41,7 @@ namespace Common
         }
 
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Book> Bookstore_Book { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookInfo> Bookstore_BookInfo { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTopic> Bookstore_BookTopic { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ChildrensBook> Bookstore_ChildrensBook { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Comment> Bookstore_Comment { get; set; }
@@ -49,6 +50,7 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Employee> Bookstore_Employee { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_EmployeeDepartment> Bookstore_EmployeeDepartment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ForeignBook> Bookstore_ForeignBook { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Genre> Bookstore_Genre { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Manager> Bookstore_Manager { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Person> Bookstore_Person { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Topic> Bookstore_Topic { get; set; }
