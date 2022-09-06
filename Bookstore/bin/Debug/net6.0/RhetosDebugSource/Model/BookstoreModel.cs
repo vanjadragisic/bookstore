@@ -84,6 +84,18 @@ namespace Bookstore
         /*DataStructureInfo ClassBody Bookstore.CommonMisspelling*/
     }
 
+    /*DataStructureInfo ClassAttributes Bookstore.ComplexSearch*/
+    public class ComplexSearch/*DataStructureInfo ClassInterace Bookstore.ComplexSearch*/
+    {
+        /*PropertyInfo Attribute Bookstore.ComplexSearch.ForeignBooksOnly*/
+        public bool? ForeignBooksOnly { get; set; }
+        /*PropertyInfo Attribute Bookstore.ComplexSearch.MaskTitles*/
+        public bool? MaskTitles { get; set; }
+        /*PropertyInfo Attribute Bookstore.ComplexSearch.MinimumPages*/
+        public int? MinimumPages { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.ComplexSearch*/
+    }
+
     /*DataStructureInfo ClassAttributes Bookstore.Department*/
     public class Department : EntityBase<Bookstore.Department>/*Next DataStructureInfo ClassInterace Bookstore.Department*/
     {
@@ -144,6 +156,12 @@ namespace Bookstore
         /*DataStructureInfo ClassBody Bookstore.FinishBeforeStart*/
     }
 
+    /*DataStructureInfo ClassAttributes Bookstore.ForeignAuthorXWithComments*/
+    public class ForeignAuthorXWithComments/*DataStructureInfo ClassInterace Bookstore.ForeignAuthorXWithComments*/
+    {
+        /*DataStructureInfo ClassBody Bookstore.ForeignAuthorXWithComments*/
+    }
+
     /*DataStructureInfo ClassAttributes Bookstore.ForeignBook*/
     public class ForeignBook : EntityBase<Bookstore.ForeignBook>/*Next DataStructureInfo ClassInterace Bookstore.ForeignBook*/
     {
@@ -182,6 +200,28 @@ namespace Bookstore
     public class Iban_MinLengthFilter/*DataStructureInfo ClassInterace Bookstore.Iban_MinLengthFilter*/
     {
         /*DataStructureInfo ClassBody Bookstore.Iban_MinLengthFilter*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.LongBooks*/
+    public class LongBooks/*DataStructureInfo ClassInterace Bookstore.LongBooks*/
+    {
+        /*DataStructureInfo ClassBody Bookstore.LongBooks*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.LongBooks2*/
+    public class LongBooks2/*DataStructureInfo ClassInterace Bookstore.LongBooks2*/
+    {
+        /*DataStructureInfo ClassBody Bookstore.LongBooks2*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.LongBooks3*/
+    public class LongBooks3/*DataStructureInfo ClassInterace Bookstore.LongBooks3*/
+    {
+        /*PropertyInfo Attribute Bookstore.LongBooks3.ForeignBooksOnly*/
+        public bool? ForeignBooksOnly { get; set; }
+        /*PropertyInfo Attribute Bookstore.LongBooks3.MinimumPages*/
+        public int? MinimumPages { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.LongBooks3*/
     }
 
     /*DataStructureInfo ClassAttributes Bookstore.Manager*/

@@ -95,8 +95,13 @@ namespace Bookstore.Repositories
         {
             return new KeyValuePair<string, Type>[]
             {
+                new KeyValuePair<string, Type>(@"ComplexSearch", typeof(ComplexSearch)),
                 new KeyValuePair<string, Type>(@"Bookstore.CommonMisspelling", typeof(Bookstore.CommonMisspelling)),
+                new KeyValuePair<string, Type>(@"Bookstore.ForeignAuthorXWithComments", typeof(Bookstore.ForeignAuthorXWithComments)),
+                new KeyValuePair<string, Type>(@"Bookstore.LongBooks", typeof(Bookstore.LongBooks)),
                 new KeyValuePair<string, Type>(@"Bookstore.SystemRequiredCode", typeof(Bookstore.SystemRequiredCode)),
+                new KeyValuePair<string, Type>(@"LongBooks2", typeof(LongBooks2)),
+                new KeyValuePair<string, Type>(@"LongBooks3", typeof(LongBooks3)),
                 /*DataStructureInfo ReadParameterTypes Bookstore.Book*/
             };
         }
@@ -249,6 +254,26 @@ namespace Bookstore.Repositories
             yield break;
         }
 
+        public global::Bookstore.Book[] Load(ComplexSearch filter_Parameter)
+        {
+            Func<Common.DomRepository, ComplexSearch/*FilterByInfo AdditionalParametersType Bookstore.Book.ComplexSearch*/, Bookstore.Book[]> filter_Function =
+                (repository, parameter) =>
+        {
+            var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
+            if (parameter.ForeignBooksOnly == true)
+                query = query.Where(item => item.Extension_ForeignBook.ID != null);
+            Book[] books = query.ToSimple().ToArray();
+
+            if (parameter.MaskTitles == true)
+                foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title)))
+                    book.Title = book.Title.First() + "***" + book.Title.Last();
+
+            return books;
+        };
+
+            return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.Book.ComplexSearch*/);
+        }
+
         public IEnumerable<InvalidDataMessage> GetErrorMessage_CommonMisspelling(IEnumerable<Guid> invalidData_Ids)
         {
             IDictionary<string, object> metadata = new Dictionary<string, object>();
@@ -284,9 +309,43 @@ namespace Bookstore.Repositories
             return source.Where(book => book.Title.Contains("curiousity"));
         }
 
+        public IQueryable<Common.Queryable.Bookstore_Book> Filter(IQueryable<Common.Queryable.Bookstore_Book> source, Bookstore.ForeignAuthorXWithComments parameter)
+        {/*QueryFilterExpressionInfo BeforeFilter Bookstore.Book.'Bookstore.ForeignAuthorXWithComments'*/
+            return source.Where(item =>
+            item.Author.Name.StartsWith("X")
+            && item.Extension_ForeignBook.ID != null
+            && _domRepository.Bookstore.Comment.Subquery.Where(c => c.BookID == item.ID).Count() >= 3);
+        }
+
+        public IQueryable<Common.Queryable.Bookstore_Book> Filter(IQueryable<Common.Queryable.Bookstore_Book> source, Bookstore.LongBooks parameter)
+        {/*QueryFilterExpressionInfo BeforeFilter Bookstore.Book.'Bookstore.LongBooks'*/
+            return source.Where(item => item.NumberOfPages >= 500);
+        }
+
         public IQueryable<Common.Queryable.Bookstore_Book> Filter(IQueryable<Common.Queryable.Bookstore_Book> source, Bookstore.SystemRequiredCode parameter)
         {/*QueryFilterExpressionInfo BeforeFilter Bookstore.Book.'Bookstore.SystemRequiredCode'*/
             return source.Where(item => item.Code == null);
+        }
+
+        public IQueryable<Common.Queryable.Bookstore_Book> Filter(IQueryable<Common.Queryable.Bookstore_Book> query, LongBooks2 parameter)
+        {/*ComposableFilterByInfo BeforeFilter Bookstore.Book.LongBooks2*/
+            // Suppressing additional expression arguments in optimized ComposableFilterBy format (configuration option CommonConcepts:ComposableFilterByOptimizeLambda)
+            // /*ComposableFilterByInfo AdditionalParametersArgument Bookstore.Book.LongBooks2*/
+            // /*ComposableFilterByInfo AdditionalParametersType Bookstore.Book.LongBooks2*/
+            
+            return query.Where(item => item.NumberOfPages >= 500);
+        }
+
+        public IQueryable<Common.Queryable.Bookstore_Book> Filter(IQueryable<Common.Queryable.Bookstore_Book> query, LongBooks3 parameter)
+        {/*ComposableFilterByInfo BeforeFilter Bookstore.Book.LongBooks3*/
+            // Suppressing additional expression arguments in optimized ComposableFilterBy format (configuration option CommonConcepts:ComposableFilterByOptimizeLambda)
+            // /*ComposableFilterByInfo AdditionalParametersArgument Bookstore.Book.LongBooks3*/
+            // /*ComposableFilterByInfo AdditionalParametersType Bookstore.Book.LongBooks3*/
+            
+            var filtered = query.Where(item => item.NumberOfPages >= parameter.MinimumPages);
+                if (parameter.ForeignBooksOnly == true)
+                    filtered = filtered.Where(item => item.Extension_ForeignBook.ID != null);
+                return filtered;
         }
 
         /*DataStructureInfo RepositoryMembers Bookstore.Book*/
