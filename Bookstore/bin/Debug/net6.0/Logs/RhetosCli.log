@@ -966,3 +966,24 @@
 2022-09-06 08:31:41.6557|INFO|ApplicationInitialization|Initialization ClaimGenerator.
 2022-09-06 08:31:42.6444|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
 2022-09-06 08:31:42.6603|INFO|Rhetos DbUpdate|Done.
+2022-09-06 09:42:31.3625|INFO|Rhetos DbUpdate base|Started 'dotnet' process 18348.
+2022-09-06 09:42:31.7626|INFO|Rhetos DbUpdate|Started in C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\bin\Debug\net6.0\
+2022-09-06 09:42:31.7907|INFO|DatabaseUpdate|Loading plugins.
+2022-09-06 09:42:32.3676|INFO|DatabaseDeployment|SQL connection: DataSource=(localdb)\MSSQLLocalDB, InitialCatalog=Bookstore
+2022-09-06 09:42:32.5347|INFO|DatabaseDeployment|Preparing Rhetos database.
+2022-09-06 09:42:32.8673|INFO|DatabaseDeployment|Cleaning old migration data.
+2022-09-06 09:42:32.9537|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 17 remaining.
+2022-09-06 09:42:32.9537|INFO|DatabaseDeployment|Executing data migration scripts.
+2022-09-06 09:42:32.9676|INFO|ConceptDataMigration|Executing 1 before-data-migration scripts.
+2022-09-06 09:42:33.4088|INFO|DataMigration|Executed 0 of 12 scripts.
+2022-09-06 09:42:33.4109|INFO|ConceptDataMigration|Executing 1 after-data-migration scripts.
+2022-09-06 09:42:33.4297|INFO|DatabaseDeployment|Upgrading database.
+2022-09-06 09:42:33.4838|INFO|DatabaseGenerator|Removing 0 database objects.
+2022-09-06 09:42:33.4996|INFO|DatabaseGenerator|Creating 0 database objects.
+2022-09-06 09:42:33.4996|INFO|DatabaseDeployment|Deleting redundant migration data.
+2022-09-06 09:42:33.5261|INFO|DatabaseCleaner|Deleted 4 columns in data migration schemas, 17 remaining.
+2022-09-06 09:42:33.5261|INFO|ApplicationInitialization|Loading generated plugins.
+2022-09-06 09:42:33.5686|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2022-09-06 09:42:34.4117|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2022-09-06 09:42:35.0261|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2022-09-06 09:42:35.0261|INFO|Rhetos DbUpdate|Done.

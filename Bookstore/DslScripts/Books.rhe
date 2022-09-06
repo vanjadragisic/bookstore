@@ -54,57 +54,6 @@
         UniqueMultiple 'Book Topic';
     }
 
-    //EMPLOYEES MANAGEMENT
-
-    Entity Employee
-    {
-        Integer IdentificationNumber;
-        ShortString LastName { Required; }
-        ShortString FirstName { Required; }
-        ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }
-        DateTime WorkStarted { Required; }
-        DateTime WorkFinished;
-        Integer TestPeriod { MinValue 1; MaxValue 12; }
-        ShortString Iban { Required; Unique; MinLength 21; MaxLength 21; }
-
-        UniqueMultiple 'LastName FirstName';
-
-        ItemFilter FinishBeforeStart 'employee => employee.WorkFinished != null
-            && employee.WorkFinished.Value < employee.WorkStarted.Value';
-        InvalidData FinishBeforeStart 'It is not allowed to enter a WorkFinished time before the WorkStarted time.';
-    }
-
-    Entity Manager
-    {
-        Extends Bookstore.Employee;
-
-        ShortString Bonuses;
-
-        Reference Employee Bookstore.Employee;
-    }
-
-    Entity EducationRecord
-    {
-        DateTime RecordDate;
-        ShortString Description;
-
-        Reference Employee Bookstore.Employee;
-    }
-
-    Entity Department
-    {
-        ShortString Code { Unique; }
-        ShortString Description { Unique; }
-    }
-
-    Entity EmployeeDepartment
-    {
-        Reference Employee { Detail; }
-        Reference Department { Required; }
-
-        UniqueMultiple 'Employee Department';
-    }
-
     Browse BookGrid Bookstore.Book
     {
         Take Code;
@@ -137,26 +86,28 @@
     }
 
     Hardcoded Genre
-{
-    ShortString Label; // Short text displayed to user.
-    LongString Description;
-    Bool IsFiction;
-
-    Entry ScienceFiction
     {
-        Value Label 'Science fiction';
-        Value Description 'A speculative fiction with imagined elements that are inspired by natural sciences or social sciences.';
-        Value IsFiction 1;
-    }
+        ShortString Label; // Short text displayed to user.
+        LongString Description;
+        Bool IsFiction;
 
-    Entry Biography
-    {
-        Value Label 'Biography';
-        Value Description 'A written narrative of a person''s life.';
-        Value IsFiction 0;
+        Entry ScienceFiction
+        {
+            Value Label 'Science fiction';
+            Value Description 'A speculative fiction with imagined elements that are inspired by natural sciences or social sciences.';
+            Value IsFiction 1;
+        }
+
+        Entry Biography
+        {
+            Value Label 'Biography';
+            Value Description 'A written narrative of a person''s life.';
+            Value IsFiction 0;
+        }
     }
 }
-}
+
+//FLAT
 
 //Module Bookstore;
 //Entity Bookstore.Book;

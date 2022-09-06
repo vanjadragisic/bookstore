@@ -9555,6 +9555,10 @@
         {
           "PhysicalPath": "C:\\Users\\VanjaDragisic\\Projects\\Bookstore\\Bookstore\\DslScripts\\Books.rhe",
           "InPackagePath": "DslScripts\\Books.rhe"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\VanjaDragisic\\Projects\\Bookstore\\Bookstore\\DslScripts\\Employees.rhe",
+          "InPackagePath": "DslScripts\\Employees.rhe"
         }
       ]
     }
