@@ -1,9 +1,0 @@
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\EntityFrameworkContext.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\Model\BookstoreModel.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\Model\CommonModel.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\Model\QueryExtensions.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\PersistenceStorageMapper.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\Repositories.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\Repositories\BookstoreRepositories.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\Repositories\CommonRepositories.cs
-C:\Users\VanjaDragisic\Projects\Bookstore\Bookstore\obj\Rhetos\Source\RhetosHostBuilderAppConfiguration.cs
