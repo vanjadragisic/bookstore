@@ -24,8 +24,6 @@
 
         ShortString Bonuses;
 
-        Reference Employee Bookstore.Employee;
-
         Logging;
     }
 
