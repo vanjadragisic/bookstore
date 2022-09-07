@@ -117,7 +117,7 @@
         "
             SELECT
                 b.ID,
-                NumberOfTopics = COUNT(c.ID)
+                NumberOfComments = COUNT(c.ID)
             FROM
                 Bookstore.Book b
                 LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID
@@ -173,6 +173,21 @@
             Value IsFiction 0;
         }
     }
+
+    Action InsertManyBooks
+    '(parameter, repository, userInfo) =>
+    {
+        for (int i = 0; i < parameter.NumberOfBooks; i++)
+        {
+            string newTitle = parameter.TitlePrefix + " - " + (i + 1);
+            var newBook = new Bookstore.Book { Code = "+++", Title = newTitle };
+            repository.Bookstore.Book.Insert(newBook);
+        }
+    }'
+{
+    Integer NumberOfBooks;
+    ShortString TitlePrefix;
+}
 }
 
 //FLAT
